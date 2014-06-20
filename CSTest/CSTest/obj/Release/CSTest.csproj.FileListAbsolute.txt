@@ -1,0 +1,9 @@
+Z:\Work\throben\bench\CSTest\CSTest\bin\Release\CSTest.exe
+Z:\Work\throben\bench\CSTest\CSTest\bin\Release\CSTest.pdb
+Z:\Work\throben\bench\CSTest\CSTest\obj\Release\CSTest.exe
+Z:\Work\throben\bench\CSTest\CSTest\obj\Release\CSTest.pdb
+Z:\Workbench\throben\bench\CSTest\CSTest\obj\Release\CSTest.exe
+Z:\Workbench\throben\bench\CSTest\CSTest\obj\Release\CSTest.pdb
+Z:\Workbench\throben\bench\CSTest\CSTest\bin\Release\CSTest.exe
+Z:\Workbench\throben\bench\CSTest\CSTest\bin\Release\CSTest.pdb
+Z:\Workbench\throben\bench\CSTest\CSTest\obj\Release\CSTest.csprojResolveAssemblyReference.cache

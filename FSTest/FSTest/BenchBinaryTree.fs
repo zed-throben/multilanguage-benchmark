@@ -1,0 +1,44 @@
+﻿module BenchBinaryTree
+
+(*
+      The Computer Language Benchmarks Game
+      http://benchmarksgame.alioth.debian.org/ 
+
+      Contributed by Don Syme
+      Port of C# version by by Marek Safar and optimized by kasthack
+*)
+
+open System
+
+[<AllowNullLiteral>]
+type TreeNode(left:TreeNode,right:TreeNode,item) = 
+    member __.CheckSum =
+        match right with 
+        | null -> item 
+        | _ -> item + left.CheckSum - right.CheckSum
+
+let rec mkTree(item, depth) =
+    if depth = 0 then TreeNode(null, null, item)
+    else TreeNode(mkTree (2*item - 1, depth-1), mkTree(2*item, depth-1), item)
+
+let bottomUpTree (item, depth) = mkTree(item, depth - 1)
+
+let minDepth = 4
+
+let run(n:int) = 
+    let maxDepth = Math.Max(minDepth + 2, n)
+    let stretchDepth = maxDepth + 1
+    let mutable check = bottomUpTree(0, stretchDepth).CheckSum
+    Console.WriteLine("stretch tree of depth {0}\t check: {1}", stretchDepth, check)
+    let longLivedTree = bottomUpTree(0, maxDepth)
+    for depth in minDepth .. 2 .. maxDepth do
+         let iterations = 1 <<< ( maxDepth - depth + minDepth )
+         check <- 0
+         for i in 1 .. iterations do 
+            check <- check + bottomUpTree(i, depth).CheckSum
+            check <- check + bottomUpTree(-i, depth).CheckSum
+         Console.WriteLine("{0}\t trees of depth {1}\t check: {2}",iterations * 2, depth, check)
+    Console.WriteLine("long lived tree of depth {0}\t check: {1}",maxDepth, longLivedTree.CheckSum)
+
+let test()=
+    run 20

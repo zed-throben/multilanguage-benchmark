@@ -1,0 +1,5 @@
+Z:\Work\throben\bench\CSTest\CSTest\bin\Debug\CSTest.exe
+Z:\Work\throben\bench\CSTest\CSTest\bin\Debug\CSTest.pdb
+Z:\Work\throben\bench\CSTest\CSTest\obj\Debug\CSTest.csprojResolveAssemblyReference.cache
+Z:\Work\throben\bench\CSTest\CSTest\obj\Debug\CSTest.exe
+Z:\Work\throben\bench\CSTest\CSTest\obj\Debug\CSTest.pdb
